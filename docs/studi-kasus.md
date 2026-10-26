@@ -52,6 +52,27 @@ memprediksi label kelompok tersebut.
 - **Silhouette Score K-Means:** 0,4446.
 - Parameter terbaik Random Forest: `min_samples_split=5`, `n_estimators=50`.
 
+## Visualisasi
+
+### Pemilihan jumlah cluster (KElbowVisualizer, metrik silhouette)
+
+Grafik ini menampilkan Silhouette Score untuk k=2 sampai k=10, menggunakan
+`KElbowVisualizer` dengan `metric='silhouette'`. Ini bukan metode elbow berbasis
+inertia/WCSS. Keputusan akhir memakai 4 cluster.
+
+![Pemilihan jumlah cluster](../assets/elbow-method-kmeans.png)
+
+### Proyeksi PCA 2D dari empat cluster
+
+Hasil K-Means (4 cluster) diproyeksikan ke 2 komponen utama. Titik-titik
+menunjukkan observasi transaksi individual dalam ruang hasil transformasi; warna
+menandai kelompok cluster, titik besar adalah pusat cluster. Grafik ini
+memperlihatkan distribusi dan tingkat pemisahan, bukan bukti bahwa cluster
+terpisah sempurna. Silhouette Score keseluruhan 0,4446 menunjukkan pemisahan
+sedang.
+
+![Proyeksi PCA 2D dari empat cluster](../assets/pca-2d-clusters.png)
+
 ## Keterbatasan (wajib dibaca)
 
 1. **Akurasi 100% bukan kemampuan memprediksi dunia nyata.** Target yang diprediksi adalah

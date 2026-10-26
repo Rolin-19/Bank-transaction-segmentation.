@@ -76,6 +76,28 @@ Parameter terbaik Random Forest setelah tuning: `min_samples_split=5`, `n_estima
 
 Silhouette Score K-Means: **0,4446**.
 
+## Visualisasi
+
+### Pemilihan jumlah cluster (KElbowVisualizer, metrik silhouette)
+
+Grafik ini menampilkan Silhouette Score untuk k=2 sampai k=10. Metode yang dipakai
+adalah `KElbowVisualizer` dengan `metric='silhouette'`, bukan metode elbow berbasis
+inertia/WCSS. Nilai tertinggi menunjukkan jumlah cluster yang paling sesuai; keputusan
+akhir memakai 4 cluster.
+
+![Pemilihan jumlah cluster dengan KElbowVisualizer (silhouette)](assets/elbow-method-kmeans.png)
+
+### Proyeksi PCA 2D dari empat cluster
+
+Hasil K-Means (4 cluster) diproyeksikan ke 2 komponen utama (PCA). Titik-titik
+menunjukkan observasi transaksi individual dalam ruang hasil transformasi; warna
+menandai kelompok cluster, dan titik besar adalah pusat cluster. Grafik ini
+memperlihatkan distribusi dan tingkat pemisahan antar kelompok, bukan bukti bahwa
+cluster terpisah sempurna. Silhouette Score keseluruhan 0,4446 menunjukkan pemisahan
+sedang.
+
+![Proyeksi PCA 2D dari empat cluster transaksi](assets/pca-2d-clusters.png)
+
 ## Keterbatasan (penting)
 
 1. **Akurasi 100% bukan kemampuan memprediksi dunia nyata.** Target yang diprediksi adalah
