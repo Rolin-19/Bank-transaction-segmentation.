@@ -19,6 +19,9 @@ memprediksi label kelompok yang dihasilkan clustering.
 
 ```
 bank-transaction-segmentation/
+├── assets/
+│   ├── elbow-method-kmeans.png      # KElbowVisualizer (silhouette, k=2-10)
+│   └── pca-2d-clusters.png         # proyeksi PCA 2D dari 4 cluster
 ├── docs/
 │   └── studi-kasus.md              # dokumentasi metode, hasil, keterbatasan
 ├── README.md
@@ -37,7 +40,7 @@ bank-transaction-segmentation/
 Dataset berisi atribut transaksi bank: `TransactionAmount`, `TransactionType`, `Location`,
 `Channel`, `CustomerAge`, `CustomerOccupation`, `TransactionDuration`, `LoginAttempts`,
 `AccountBalance`, `AgeGroup`. Sumber: Google Sheets publik yang dirujuk materi kursus
-([tautan](https://docs.google.com/spreadsheets/d/e/2PACX-1vTbg5WVW6W3c8SPNUGc3A3AL-AG32TPEQGpdzARfNICMsLFI0LQj0jporhsLCeVhkN5AoRsTkn08AYl/pub?output=csv)).
+([sumber data](https://docs.google.com/spreadsheets/d/e/2PACX-1vTbg5WVW6W3c8SPNUGc3A3AL-AG32TPEQGpdzARfNICMsLFI0LQj0jporhsLCeVhkN5AoRsTkn08AYl/pub?output=csv)).
 
 > **Catatan sumber & lisensi:** dataset berasal dari Google Sheets publik yang dirujuk
 > materi kursus Dicoding. Lisensi republication belum diverifikasi; karena itu dataset
