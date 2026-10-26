@@ -121,8 +121,9 @@ sedang.
 Repositori publik ini berisi **dokumentasi**, bukan kode yang dapat dijalankan. Notebook
 submission asli, CSV, dan model disimpan lokal dan tidak didistribusikan (hak publikasi
 belum terverifikasi). Untuk mereproduksi analisis, dependensi yang dipakai tercantum di
-`requirements.txt`; notebook asli dijalankan di lingkungan Python 3.14 dengan pandas,
-scikit-learn, dan yellowbrick.
+`requirements.txt`; notebook asli dijalankan di lingkungan Python 3.12.10 dengan pandas,
+scikit-learn, dan yellowbrick. Metadata kedua notebook submission mencatat lingkungan
+Python 3.12.10.
 
 ## Sumber & atribusi
 
