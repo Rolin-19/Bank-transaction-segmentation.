@@ -39,12 +39,14 @@ Dataset berisi atribut transaksi bank: `TransactionAmount`, `TransactionType`, `
 `AccountBalance`, `AgeGroup`. Sumber: Google Sheets publik yang dirujuk materi kursus
 ([tautan](https://docs.google.com/spreadsheets/d/e/2PACX-1vTbg5WVW6W3c8SPNUGc3A3AL-AG32TPEQGpdzARfNICMsLFI0LQj0jporhsLCeVhkN5AoRsTkn08AYl/pub?output=csv)).
 
-> **Catatan lisensi:** dataset berasal dari materi kursus Dicoding. Pastikan lisensi
-> penggunaannya mengizinkan publikasi sebelum repo ini dibuat publik.
+> **Catatan sumber & lisensi:** dataset berasal dari Google Sheets publik yang dirujuk
+> materi kursus Dicoding. Lisensi republication belum diverifikasi; karena itu dataset
+> dan notebook tidak didistribusikan dalam repositori ini. Tautan sumber di atas
+> disediakan untuk referensi.
 
 ## Metode
 
-### 1. Clustering (`[Clustering]_...ipynb`)
+### 1. Clustering (notebook clustering, disimpan lokal)
 
 1. Pembersihan data: penanganan nilai kosong, encoding kategorikal, standardisasi fitur numerik.
 2. K-Means dengan `n_clusters` ditentukan lewat Elbow Method (Silhouette).
@@ -52,7 +54,7 @@ Dataset berisi atribut transaksi bank: `TransactionAmount`, `TransactionType`, `
 4. Interpretasi 4 kelompok transaksi dari agregasi mean/min/max fitur numerik dan modus fitur kategorikal
    pada data yang sudah di-inverse transform.
 
-### 2. Klasifikasi (`[Klasifikasi]_...ipynb`)
+### 2. Klasifikasi (notebook klasifikasi, disimpan lokal)
 
 1. Memuat `data_clustering_inverse.csv`, one-hot encoding fitur kategorikal.
 2. Split 80/20 (stratified) → 1.556 data latih, 389 data uji.
@@ -89,14 +91,13 @@ Silhouette Score K-Means: **0,4446**.
 5. Akurasi 100% pada data uji kecil (389 baris) dengan 4 kelas seimbang berpotensi overfitting;
    belum diuji pada data baru.
 
-## Cara menjalankan
+## Reproduksi
 
-1. Clone repositori ini.
-2. Buat virtual environment: `python -m venv .venv` lalu aktifkan.
-3. Install dependensi: `pip install pandas numpy matplotlib seaborn scikit-learn yellowbrick joblib`
-4. Jalankan notebook clustering terlebih dahulu (`[Clustering]_...ipynb`), lalu klasifikasi
-   (`[Klasifikasi]_...ipynb`).
-5. Pastikan file `data_clustering.csv` dan `data_clustering_inverse.csv` tersedia di folder kerja.
+Repositori publik ini berisi **dokumentasi**, bukan kode yang dapat dijalankan. Notebook
+submission asli, CSV, dan model disimpan lokal dan tidak didistribusikan (hak publikasi
+belum terverifikasi). Untuk mereproduksi analisis, dependensi yang dipakai tercantum di
+`requirements.txt`; notebook asli dijalankan di lingkungan Python 3.14 dengan pandas,
+scikit-learn, dan yellowbrick.
 
 ## Sumber & atribusi
 
@@ -107,4 +108,5 @@ Silhouette Score K-Means: **0,4446**.
 
 ## Status
 
-Proyek kursus · Dicoding · 2026. Belum dipublikasikan sebagai repositori GitHub.
+Proyek kursus · Dicoding · 2026. Repositori publik berisi dokumentasi dan studi kasus.
+Notebook, CSV, dan model disimpan lokal.
